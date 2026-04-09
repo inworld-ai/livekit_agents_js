@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "onnxruntime-node": "1.21.0",
-    "ws": "^8.16.0"
+    "ws": "^8.17.1"
   },
   "peerDependencies": {
     "@livekit/agents": "workspace:*",
