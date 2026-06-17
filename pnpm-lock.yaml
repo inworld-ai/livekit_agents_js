@@ -14,7 +14,7 @@ catalogs:
       version: 8.18.1
     ws:
       specifier: ^8.18.0
-      version: 8.20.0
+      version: 8.21.0
 
 overrides:
   brace-expansion@>=1.0.0 <1.1.13: 1.1.13
@@ -191,7 +191,7 @@ importers:
         version: 1.5.1
       openai:
         specifier: ^6.8.1
-        version: 6.8.1(ws@8.20.0)(zod@3.25.76)
+        version: 6.8.1(ws@8.21.0)(zod@3.25.76)
       pidusage:
         specifier: ^4.0.1
         version: 4.0.1
@@ -209,7 +209,7 @@ importers:
         version: 14.0.0
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
       zod-to-json-schema:
         specifier: ^3.24.6
         version: 3.24.6(zod@3.25.76)
@@ -351,7 +351,7 @@ importers:
         version: 2.14.1
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@types/node':
         specifier: ^22.5.5
@@ -376,7 +376,7 @@ importers:
         version: 2.14.1
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -406,8 +406,8 @@ importers:
   plugins/assemblyai:
     dependencies:
       ws:
-        specifier: ^8.20.1
-        version: 8.20.1
+        specifier: ^8.21.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -441,10 +441,10 @@ importers:
         version: 17.2.3
       openai:
         specifier: ^6.8.1
-        version: 6.8.1(ws@8.20.0)(zod@4.3.6)
+        version: 6.8.1(ws@8.21.0)(zod@4.3.6)
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -503,7 +503,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
       zod:
         specifier: ^3.25.76 || ^4.1.8
         version: 4.3.6
@@ -540,7 +540,7 @@ importers:
         version: 3.1.3
       openai:
         specifier: ^6.8.1
-        version: 6.8.1(ws@8.20.1)(zod@4.3.6)
+        version: 6.8.1(ws@8.21.0)(zod@4.3.6)
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -571,7 +571,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -608,7 +608,7 @@ importers:
         version: 1.1.1
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -701,7 +701,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -760,7 +760,7 @@ importers:
         version: 2.14.1
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -816,7 +816,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -897,7 +897,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -931,10 +931,10 @@ importers:
         version: 1.1.1
       openai:
         specifier: ^6.8.1
-        version: 6.8.1(ws@8.20.0)(zod@4.3.6)
+        version: 6.8.1(ws@8.21.0)(zod@4.3.6)
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
       zod:
         specifier: ^3.25.76 || ^4.1.8
         version: 4.3.6
@@ -990,7 +990,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:^
@@ -1021,7 +1021,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -1080,7 +1080,7 @@ importers:
     dependencies:
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -1117,7 +1117,7 @@ importers:
         version: 1.24.3
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -1198,10 +1198,10 @@ importers:
     dependencies:
       openai:
         specifier: ^6.8.1
-        version: 6.8.1(ws@8.20.0)(zod@4.3.6)
+        version: 6.8.1(ws@8.21.0)(zod@4.3.6)
       ws:
         specifier: 'catalog:'
-        version: 8.20.0
+        version: 8.21.0
     devDependencies:
       '@livekit/agents':
         specifier: workspace:*
@@ -5009,20 +5009,8 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  ws@8.20.0:
-    resolution: {integrity: sha512-sAt8BhgNbzCtgGbt2OxmpuryO63ZoDk/sqaB/znQm94T4fCEsy/yV+7CdC1kJhOU9lboAEU7R3kquuycDoibVA==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
-  ws@8.20.1:
-    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
+  ws@8.21.0:
+    resolution: {integrity: sha512-Vsp28b7DRcimFQvrqu2Wek3z1iYxDCWqHYB8Qsnk/S4RfaCQzPGPyBNuVjJV3cd6UiKtUtp6sNM77gWvzcCH+g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -5529,7 +5517,7 @@ snapshots:
       google-auth-library: 10.6.2
       p-retry: 4.6.2
       protobufjs: 7.5.6
-      ws: 8.20.1
+      ws: 8.21.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -5855,7 +5843,7 @@ snapshots:
 
   '@mistralai/mistralai@2.2.1':
     dependencies:
-      ws: 8.20.1
+      ws: 8.21.0
       zod: 4.3.6
       zod-to-json-schema: 3.25.2(zod@4.3.6)
     transitivePeerDependencies:
@@ -8169,19 +8157,14 @@ snapshots:
       platform: 1.3.6
       protobufjs: 7.5.4
 
-  openai@6.8.1(ws@8.20.0)(zod@3.25.76):
+  openai@6.8.1(ws@8.21.0)(zod@3.25.76):
     optionalDependencies:
-      ws: 8.20.0
+      ws: 8.21.0
       zod: 3.25.76
 
-  openai@6.8.1(ws@8.20.0)(zod@4.3.6):
+  openai@6.8.1(ws@8.21.0)(zod@4.3.6):
     optionalDependencies:
-      ws: 8.20.0
-      zod: 4.3.6
-
-  openai@6.8.1(ws@8.20.1)(zod@4.3.6):
-    optionalDependencies:
-      ws: 8.20.1
+      ws: 8.21.0
       zod: 4.3.6
 
   optionator@0.9.4:
@@ -8258,7 +8241,7 @@ snapshots:
 
   phonic@0.31.12:
     dependencies:
-      ws: 8.20.1
+      ws: 8.21.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -9209,9 +9192,7 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  ws@8.20.0: {}
-
-  ws@8.20.1: {}
+  ws@8.21.0: {}
 
   yallist@4.0.0: {}
 
