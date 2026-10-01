@@ -1,5 +1,12 @@
 # @livekit/agents-plugin-did
 
+## 1.9.2
+
+### Patch Changes
+
+- Updated dependencies [[`df97b86`](https://github.com/livekit/agents-js/commit/df97b867b3b16efbd348584c818cefc5536ef21a)]:
+  - @livekit/agents@1.9.2
+
 ## 1.9.1
 
 ### Patch Changes

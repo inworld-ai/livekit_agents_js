@@ -1,5 +1,12 @@
 # @livekit/agents
 
+## 1.9.2
+
+### Patch Changes
+
+- Prevent rejected avatar clear-buffer RPCs from emitting unhandled rejections or stranding - [#2045](https://github.com/livekit/agents-js/pull/2045) ([@smorimoto](https://github.com/smorimoto))
+  playout waiters.
+
 ## 1.9.1
 
 ### Patch Changes
