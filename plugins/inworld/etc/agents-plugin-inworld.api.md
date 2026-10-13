@@ -177,8 +177,6 @@ export interface TTSOptions {
     // (undocumented)
     timestampType?: TimestampType;
     // Warning: (ae-forgotten-export) The symbol "tokenize" needs to be exported by the entry point index.d.ts
-    //
-    // (undocumented)
     tokenizer?: tokenize.SentenceTokenizer;
     // (undocumented)
     voice: string;
