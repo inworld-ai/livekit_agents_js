@@ -154,8 +154,7 @@ export interface TTSOptions {
     baseURL: string;
     // (undocumented)
     bitRate: number;
-    // (undocumented)
-    bufferCharThreshold: number;
+    bufferCharThreshold?: number;
     deliveryMode?: DeliveryMode;
     // (undocumented)
     encoding: Encoding;

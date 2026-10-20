@@ -66,6 +66,7 @@ describe('Inworld auto mode strategy', () => {
     const create = received[0]!.create as Record<string, unknown>;
     expect(create.autoMode).toBe(true);
     expect(create.autoModeStrategy).toBe('SENTENCE_BOUNDARY');
+    expect(create).not.toHaveProperty('bufferCharThreshold');
     expect(received.slice(1).map((m) => Object.keys(m)[0])).toEqual([
       ...tokens.map(() => 'send_text'),
       'flush_context',
@@ -84,8 +85,16 @@ describe('Inworld auto mode strategy', () => {
     );
 
     expect(received[0]!.create).not.toHaveProperty('autoModeStrategy');
+    expect(received[0]!.create).toHaveProperty('bufferCharThreshold', 250);
     const texts = received.filter((m) => 'send_text' in m);
     expect(texts.length).toBeLessThan(tokens.length);
+  });
+
+  it('sends a set bufferCharThreshold with SENTENCE_BOUNDARY', async () => {
+    const received = await synthesize({ model: 'inworld-tts-2', bufferCharThreshold: 400 }, tokens);
+
+    expect(received[0]!.create).toHaveProperty('autoModeStrategy', 'SENTENCE_BOUNDARY');
+    expect(received[0]!.create).toHaveProperty('bufferCharThreshold', 400);
   });
 
   it('keeps client segmentation on models without sentence boundary support', async () => {

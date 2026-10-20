@@ -31,7 +31,7 @@ const DEFAULT_VOICE = 'Jason';
 const DEFAULT_TEMPERATURE = 1.1;
 const DEFAULT_TIMESTAMP_TRANSPORT_STRATEGY = 'ASYNC';
 const DEFAULT_SPEAKING_RATE = 1.0;
-const DEFAULT_BUFFER_CHAR_THRESHOLD = 100;
+const DEFAULT_BUFFER_CHAR_THRESHOLD = 250;
 const DEFAULT_MAX_BUFFER_DELAY_MS = 3000;
 const NUM_CHANNELS = 1;
 
@@ -62,7 +62,11 @@ export interface TTSOptions {
   /** Controls output variation on inworld-tts-2 only. */
   deliveryMode?: DeliveryMode;
   timestampTransportStrategy?: TimestampTransportStrategy;
-  bufferCharThreshold: number;
+  /**
+   * Buffered characters that trigger synthesis. Defaults to 250, or to the server default when the
+   * server splits sentences.
+   */
+  bufferCharThreshold?: number;
   maxBufferDelayMs: number;
   baseURL: string;
   wsURL: string;
@@ -102,7 +106,7 @@ interface CreateContextConfig {
   audioConfig: AudioConfig;
   temperature: number;
   language?: string;
-  bufferCharThreshold: number;
+  bufferCharThreshold?: number;
   maxBufferDelayMs: number;
   timestampType?: TimestampType;
   applyTextNormalization?: TextNormalization;
@@ -172,7 +176,6 @@ const defaultTTSOptionsBase: Omit<TTSOptions, 'tokenizer'> = {
   speakingRate: DEFAULT_SPEAKING_RATE,
   temperature: DEFAULT_TEMPERATURE,
   timestampTransportStrategy: DEFAULT_TIMESTAMP_TRANSPORT_STRATEGY as TimestampTransportStrategy,
-  bufferCharThreshold: DEFAULT_BUFFER_CHAR_THRESHOLD,
   maxBufferDelayMs: DEFAULT_MAX_BUFFER_DELAY_MS,
   baseURL: DEFAULT_URL,
   wsURL: DEFAULT_WS_URL,
@@ -847,7 +850,10 @@ class SynthesizeStream extends tts.SynthesizeStream {
       },
       temperature: this.#opts.temperature,
       language: this.#opts.language,
-      bufferCharThreshold: this.#opts.bufferCharThreshold,
+      // with SENTENCE_BOUNDARY the threshold also cuts long sentences, so only a set value is sent
+      bufferCharThreshold:
+        this.#opts.bufferCharThreshold ??
+        (autoModeStrategy === 'SENTENCE_BOUNDARY' ? undefined : DEFAULT_BUFFER_CHAR_THRESHOLD),
       maxBufferDelayMs: this.#opts.maxBufferDelayMs,
       timestampType: this.#opts.timestampType,
       applyTextNormalization: this.#opts.textNormalization,
