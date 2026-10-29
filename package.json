@@ -48,7 +48,7 @@
     "turbo": "2.9.14",
     "typedoc": "^0.25.13",
     "typescript": "^5.9.3",
-    "vite": "^7.3.6",
+    "vite": "^7.3.7",
     "vitest": "^4.1.11"
   },
   "packageManager": "pnpm@11.13.1"
