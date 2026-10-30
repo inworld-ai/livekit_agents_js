@@ -20,6 +20,7 @@ import {
   tool,
 } from './tool_context.js';
 import { createToolOptions, oaiParams } from './utils.js';
+import { isZodObjectSchema, isZodSchema } from './zod-utils.js';
 
 describe('tools object compatibility', () => {
   it('normalizes object tools into named function tools', () => {
@@ -137,9 +138,10 @@ describe('Tool Context', () => {
     });
 
     it('should handle optional fields', () => {
-      const schema = z.object({
-        name: z.string().describe('The user name'),
-        age: z.number().optional().describe('The user age'),
+      // v3 strict output; v4 optional fields are covered in 'oaiParams with v4 schemas'.
+      const schema = z3.object({
+        name: z3.string().describe('The user name'),
+        age: z3.number().optional().describe('The user age'),
       });
 
       const result = oaiParams(schema);
@@ -346,8 +348,8 @@ describe('Tool Context', () => {
         expect(simpleAction.type).toBe('function');
         expect(simpleAction.description).toBe('Perform a simple action');
         expect(simpleAction.parameters).toBeDefined();
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        expect((simpleAction.parameters as any)._def.typeName).toBe('ZodObject');
+        const params = simpleAction.parameters;
+        expect(isZodSchema(params) && isZodObjectSchema(params)).toBe(true);
 
         const result = await simpleAction.execute({}, createToolOptions('123'));
         expect(result).toBe('Action performed');
