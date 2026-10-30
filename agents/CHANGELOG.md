@@ -1,5 +1,29 @@
 # @livekit/agents
 
+## 1.10.0
+
+### Patch Changes
+
+- Add `tokenize.blingfire.SentenceTokenizer` (backed by `@livekit/blingfire`) and make it the default sentence tokenizer, matching the Python agents. The framework TTS adapters now also retain formatting like Python. - [#2709](https://github.com/livekit/agents-js/pull/2709) ([@davidzhao](https://github.com/davidzhao))
+
+- Send session keyterms to the Speechmatics Linden inference model. - [#2740](https://github.com/livekit/agents-js/pull/2740) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- Add Cartesia sonic-3.6 to the model lists and remove the sunset sonic, sonic-2 and sonic-turbo ids. - [#2743](https://github.com/livekit/agents-js/pull/2743) ([@cartesia-amarat](https://github.com/cartesia-amarat))
+
+- Clarify that realtime providers append chat history items when their preceding item is unknown. - [#2767](https://github.com/livekit/agents-js/pull/2767) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- Correct the inference Deepgram `mip_opt_out` docs: it is always true for LiveKit Inference, and the passed value is ignored. - [#2742](https://github.com/livekit/agents-js/pull/2742) ([@shawnfeldman](https://github.com/shawnfeldman))
+
+- Add `language_detection`, `inactivity_timeout` and `prompt` to the inference `AssemblyAIOptions` type, matching the Python SDK. - [#2779](https://github.com/livekit/agents-js/pull/2779) ([@adrian-cowham](https://github.com/adrian-cowham))
+
+- Add `inference.TurnDetector({ localFallback: false })` to disable cloud-to-local fallback, matching Python. Prediction timeouts keep cloud detection active. A terminal cloud failure disables detection for the stream and lets endpointing commit turns. Fallback remains enabled by default. - [#2726](https://github.com/livekit/agents-js/pull/2726) ([@chenghao-mou](https://github.com/chenghao-mou))
+
+- Answer every completed tool call, including interrupted, silent, and invalid calls, and keep realtime providers quiet when supported. A tool can return a handoff inside a list, and a handoff batched with another tool now applies even when that tool finishes last. - [#2289](https://github.com/livekit/agents-js/pull/2289) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- Fix a crash when a session recording upload fails while reading the response, such as on a socket reset. Also retry the same DNS and connection errors as the Python SDK, such as `EPIPE` and `EAI_FAIL`. - [#2350](https://github.com/livekit/agents-js/pull/2350) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- Text simulations no longer warn about a missing VAD for the turn detector or adaptive interruption detection; both are disabled directly since there is no audio. - [#2746](https://github.com/livekit/agents-js/pull/2746) ([@u9g](https://github.com/u9g))
+
 ## 1.9.3
 
 ### Patch Changes
