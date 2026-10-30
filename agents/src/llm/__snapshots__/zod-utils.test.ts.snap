@@ -417,13 +417,9 @@ exports[`Zod Utils > zodSchemaToJsonSchema > strict parameter > should handle ne
       "additionalProperties": false,
       "properties": {
         "email": {
-          "anyOf": [
-            {
-              "type": "string",
-            },
-            {
-              "type": "null",
-            },
+          "type": [
+            "string",
+            "null",
           ],
         },
         "name": {
@@ -451,13 +447,9 @@ exports[`Zod Utils > zodSchemaToJsonSchema > strict parameter > should handle nu
   "additionalProperties": false,
   "properties": {
     "optional": {
-      "anyOf": [
-        {
-          "type": "string",
-        },
-        {
-          "type": "null",
-        },
+      "type": [
+        "string",
+        "null",
       ],
     },
     "required": {
