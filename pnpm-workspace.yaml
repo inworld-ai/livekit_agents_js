@@ -59,7 +59,6 @@ overrides:
   'postcss@<8.5.18': ^8.5.18
   "source-map-js@<1.2.2": ^1.2.2
   'sharp@<0.35.0': ^0.35.0
-  'fast-uri@>=3.0.0 <3.1.7': ^3.1.7
 
 allowBuilds:
   '@google/genai': true
