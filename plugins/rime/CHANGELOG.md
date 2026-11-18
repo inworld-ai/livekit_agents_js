@@ -1,5 +1,20 @@
 # @livekit/agents-plugin-rime
 
+## 1.10.0
+
+### Patch Changes
+
+- Add `tokenize.blingfire.SentenceTokenizer` (backed by `@livekit/blingfire`) and make it the default sentence tokenizer, matching the Python agents. The framework TTS adapters now also retain formatting like Python. - [#2709](https://github.com/livekit/agents-js/pull/2709) ([@davidzhao](https://github.com/davidzhao))
+
+- WebSocket v1 now requires `modelId` when constructing `TTS`. If your configuration relied - [#2780](https://github.com/livekit/agents-js/pull/2780) ([@naszzz](https://github.com/naszzz))
+  on a model in the URL path, add `modelId` explicitly.
+
+  Custom endpoint paths pass through without model detection or path restrictions. The
+  examples use `coda.api.rime.ai` and `mist.api.rime.ai`.
+
+- Updated dependencies [[`0b9cab4`](https://github.com/livekit/agents-js/commit/0b9cab4f0eb7c68088d7ff329edcbd94b1b86dd8), [`b146170`](https://github.com/livekit/agents-js/commit/b14617071c691a15cd77421efd1f263c287503a2), [`fdfb565`](https://github.com/livekit/agents-js/commit/fdfb56537356c8924fbee5d32916a270e122e3c8), [`b05dc11`](https://github.com/livekit/agents-js/commit/b05dc11a72cfac080aae8f197105fbb7e3897351), [`1098fd8`](https://github.com/livekit/agents-js/commit/1098fd8ee2a8e4b0aec6ed02863ff1c42b94b105), [`6b81019`](https://github.com/livekit/agents-js/commit/6b81019447f7fd9e96227054ae1157de137858b2), [`767c7cb`](https://github.com/livekit/agents-js/commit/767c7cba771b7adc468bf8b59726c4b46086ff81), [`e3babc6`](https://github.com/livekit/agents-js/commit/e3babc6c41096521931020ad5435b703d19c86c7), [`4b607c8`](https://github.com/livekit/agents-js/commit/4b607c8e2aa9f1f480b8f3a769ef1cafe8af0940), [`df96ee8`](https://github.com/livekit/agents-js/commit/df96ee878e5fdc84071440edbc99aa07de4398ab)]:
+  - @livekit/agents@1.10.0
+
 ## 1.9.3
 
 ### Patch Changes
